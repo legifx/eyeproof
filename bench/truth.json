@@ -1,0 +1,358 @@
+[
+ {
+  "id": "01-landing",
+  "file": "fixtures/01-landing.html",
+  "viewport": "desktop",
+  "intent": "Marketing landing page for a payroll product: headline, subtitle, primary call-to-action, logo strip.",
+  "defects": [
+   {
+    "id": "cta-overflow",
+    "desc": "CTA button text spills out of the button",
+    "any": [
+     [
+      "button|cta|trial|call.to.action",
+      "overflow|spill|extend|outside|beyond|cut|clip|wider|exceed|break|fit|stick"
+     ]
+    ]
+   },
+   {
+    "id": "subtitle-contrast",
+    "desc": "Subtitle is light grey on light background",
+    "any": [
+     [
+      "subtitle|sub-?head|paragraph|description|tagline|body text|40 countries|pays your team|supporting",
+      "contrast|faint|light|pale|hard to read|readab|legib|low|washed"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "02-pricing",
+  "file": "fixtures/02-pricing.html",
+  "viewport": "desktop",
+  "intent": "Pricing page with three plan cards side by side; the middle plan is highlighted as most popular.",
+  "defects": [
+   {
+    "id": "card-offset",
+    "desc": "Middle card sits lower than the other two",
+    "any": [
+     [
+      "growth|middle|cent|popular|second|card",
+      "align|lower|offset|shift|push|top|uneven|stagger|level|down"
+     ]
+    ]
+   },
+   {
+    "id": "badge-overlap",
+    "desc": "'Most popular' badge covers the 'Growth' title",
+    "any": [
+     [
+      "badge|most popular|pill|label",
+      "overlap|cover|obscur|collid|on top|over the|hide|clash|sits over|atop"
+     ],
+     [
+      "growth|heading|title|plan name|name",
+      "missing|not visible|invisible|hidden|absent|no (plan )?name|lacks|without|never (shown|displayed|appears)|not (shown|displayed)"
+     ]
+    ]
+   },
+   {
+    "id": "price-nan",
+    "desc": "Scale price reads $NaN",
+    "any": [
+     [
+      "\\bnan\\b"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "03-signup",
+  "file": "fixtures/03-signup.html",
+  "viewport": "desktop",
+  "intent": "Sign-up card with team avatar, three inputs (email, name, password) and a submit button.",
+  "defects": [
+   {
+    "id": "broken-image",
+    "desc": "Avatar image is broken (alt text / broken icon)",
+    "any": [
+     [
+      "image|avatar|img|icon|logo|photo",
+      "broken|missing|fail|not load|alt text|placeholder"
+     ]
+    ]
+   },
+   {
+    "id": "typo",
+    "desc": "Label says 'Pasword'",
+    "any": [
+     [
+      "pasword"
+     ]
+    ]
+   },
+   {
+    "id": "input-width",
+    "desc": "Password input is narrower than the others",
+    "any": [
+     [
+      "password|pasword|input|field",
+      "width|narrow|short|inconsistent|full|half|smaller|wide"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "04-mobile",
+  "file": "fixtures/04-mobile.html",
+  "viewport": "mobile",
+  "intent": "Mobile profile screen: top navigation, avatar with name, three stat tiles, an upcoming card.",
+  "defects": [
+   {
+    "id": "nav-overflow",
+    "desc": "Nav links run off the right edge (Settings cut off)",
+    "any": [
+     [
+      "nav|header|menu|settings|link|top bar",
+      "cut|clip|off|overflow|truncat|beyond|edge|hidden|scroll|doesn.t fit|not fit"
+     ],
+     [
+      "settin"
+     ]
+    ]
+   },
+   {
+    "id": "avatar-stretched",
+    "desc": "Round avatar is stretched into an oval",
+    "any": [
+     [
+      "avatar|face|profile (pic|image|photo)|portrait|emoji|icon",
+      "stretch|squash|squish|oval|distort|ellip|aspect|wide|flatten"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "05-dashboard",
+  "file": "fixtures/05-dashboard.html",
+  "viewport": "desktop",
+  "intent": "Dark analytics dashboard: four KPI tiles, a revenue bar chart with legend, a customer table.",
+  "defects": [
+   {
+    "id": "kpi-invisible",
+    "desc": "Active users value is nearly invisible (dark on dark)",
+    "any": [
+     [
+      "active users|12,408|second kpi|second tile",
+      "invisible|contrast|dark|hard to read|unreadable|barely|faint|missing|not visible|empty|blank|hidden"
+     ],
+     [
+      "second|users|kpi|tile|card|metric",
+      "invisible|unreadable|not visible|barely|nearly|hard to read|low contrast|missing value|no value|empty|blank"
+     ]
+    ]
+   },
+   {
+    "id": "legend-mismatch",
+    "desc": "Legend swatch is green, bars are purple",
+    "any": [
+     [
+      "legend|swatch|key",
+      "green|purple|violet|colou?r|match|mismatch|inconsistent"
+     ]
+    ]
+   },
+   {
+    "id": "undefined",
+    "desc": "Owner cell shows 'undefined'",
+    "any": [
+     [
+      "undefined"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "06-modal",
+  "file": "fixtures/06-modal.html",
+  "viewport": "desktop",
+  "intent": "Confirmation dialog over the team list to remove a member, with Cancel and Remove buttons.",
+  "defects": [
+   {
+    "id": "modal-cut",
+    "desc": "Dialog runs off the bottom; buttons not visible",
+    "any": [
+     [
+      "modal|dialog|button|remove member|cancel|bottom",
+      "cut|clip|off|below|overflow|not visible|missing|hidden|outside|truncat|beyond|fold|past|exceed|extend"
+     ]
+    ]
+   },
+   {
+    "id": "close-misplaced",
+    "desc": "Close \u00d7 sits in the middle of the title instead of the corner",
+    "any": [
+     [
+      "close|\u00d7|x button|dismiss",
+      "overlap|position|misplac|middle|cover|title|corner|wrong|odd|collid"
+     ],
+     [
+      "title|heading|marco|remove",
+      "obscur|cover|overlap|cut|clip|hidden|interrupt|collid|partially"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "07-clean-article",
+  "file": "fixtures/07-clean-article.html",
+  "viewport": "desktop",
+  "intent": "Blog article page: title, byline, body paragraphs, one pull quote.",
+  "defects": []
+ },
+ {
+  "id": "08-clean-settings",
+  "file": "fixtures/08-clean-settings.html",
+  "viewport": "mobile",
+  "intent": "Mobile notification settings: four rows with toggles in a card, and a Save button.",
+  "defects": []
+ },
+ {
+  "id": "09-anim",
+  "file": "fixtures/09-anim.mp4",
+  "viewport": "video",
+  "intent": "6-second loading animation: a blue square glides smoothly left to right while a progress bar fills.",
+  "defects": [
+   {
+    "id": "jump-back",
+    "desc": "Square jumps back to the left around 3.0-3.2 s",
+    "any": [
+     [
+      "jump|jerk|glitch|skip|stutter|back|discontinu|teleport|reset|revers|inconsistent|position",
+      "3\\.|square|box|block|position|motion|movement"
+     ],
+     [
+      "3\\.0|3\\.1|3\\.2|2\\.9",
+      "jump|back|revers|left|position|glitch|discontinu|regress|snap"
+     ]
+    ]
+   },
+   {
+    "id": "red-flash",
+    "desc": "One full red frame at 4.5 s",
+    "any": [
+     [
+      "\\bred\\b",
+      "flash|frame|screen|full|solid|glitch|flicker"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "r-clean",
+  "file": "fixtures/renders/clean.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": []
+ },
+ {
+  "id": "r-floating",
+  "file": "fixtures/renders/floating.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": [
+   {
+    "id": "table-floats",
+    "desc": "Table floats above the grass, shadow detached",
+    "any": [
+     [
+      "table|desk|leg",
+      "float|hover|above (the )?(ground|grass|floor)|not (touch|rest|stand|reach)|no contact|gap|levitat|detached|off the ground|mid-?air|suspend|elevat|don.t reach|do not reach"
+     ],
+     [
+      "shadow",
+      "detach|separat|offset|disconnect|gap|far from|not under|doesn.t match|does not match"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "r-clipping",
+  "file": "fixtures/renders/clipping.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": [
+   {
+    "id": "body-through-table",
+    "desc": "Character stands inside the table, body through the top",
+    "any": [
+     [
+      "character|figure|person|body|cylinder|blue",
+      "clip|intersect|inside|through|embedded|penetrat|merg|stuck|overlap|occup|fused|behind the table|in the table"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "r-cropped",
+  "file": "fixtures/renders/cropped.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": [
+   {
+    "id": "head-cropped",
+    "desc": "Character's head is out of frame",
+    "any": [
+     [
+      "head|top|character|figure|person|body|cylinder|blue",
+      "crop|cut|clip|off|outside|missing|truncat|edge|beyond|not (fully )?(visible|in frame|shown)|out of (the )?frame|no head|headless"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "r-upside-down",
+  "file": "fixtures/renders/upside_down.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": [
+   {
+    "id": "tree-inverted",
+    "desc": "Tree crown is upside down",
+    "any": [
+     [
+      "tree|cone|crown|foliage|canopy|leaves",
+      "upside|invert|flip|wrong|point(ing|s)? down|apex|tip|rotated|reversed|downward"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "r-magenta",
+  "file": "fixtures/renders/magenta.blend",
+  "viewport": "blend",
+  "intent": "Simple 3D product-style scene: a character (blue body, round head) standing on the grass, a table with a mug, and a tree, all fully in frame and physically plausible.",
+  "defects": [
+   {
+    "id": "missing-texture",
+    "desc": "Table renders magenta (missing texture)",
+    "any": [
+     [
+      "magenta|pink|purple|fuchsia|missing texture|violet|lilac|missing image"
+     ]
+    ]
+   }
+  ]
+ }
+]

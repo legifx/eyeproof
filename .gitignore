@@ -1,0 +1,7 @@
+.venv/
+.eyeproof/
+__pycache__/
+bench/runs/
+bench/shots/
+*.egg-info/
+*.blend1

@@ -1,0 +1,21 @@
+[project]
+name = "eyeproof"
+version = "0.2.0"
+description = "Eyes for coding agents, headless: screenshots, game runs, Blender renders and videos, measured, then looked at."
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["ai-agents", "claude-code", "screenshot", "visual-qa", "playwright", "webgpu", "blender", "video", "headless"]
+requires-python = ">=3.10"
+dependencies = ["playwright>=1.50", "pillow>=10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+eyeproof = "eyeproof.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["eyeproof*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
